@@ -15,6 +15,8 @@ public class DatedDraughtsEffects {
     () -> new DatedDraughtEffect(MobEffectCategory.NEUTRAL, 0xff44cc00));
   public static final RegistrySupplier<MobEffect> OLD_WATER = EFFECTS.register("old_water",
     () -> new DatedDraughtEffect(MobEffectCategory.NEUTRAL, 0xff4444cc));
+  public static final RegistrySupplier<MobEffect> OLD_COMBAT = EFFECTS.register("old_combat",
+    () -> new DatedDraughtEffect(MobEffectCategory.NEUTRAL, 0xffff0000));
 
 
   public static void init() {

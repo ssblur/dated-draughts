@@ -26,4 +26,14 @@ public class EffectValidator {
       return SyncedRules.getValue(DatedDraughtsGameRules.OLD_WATER);
     }
   }
+
+  public static boolean applyOldCombatMechanics(Player player) {
+    if(player.hasEffect(DatedDraughtsEffects.get(DatedDraughtsEffects.OLD_COMBAT)))
+      return true;
+    if(player.level() instanceof ServerLevel level) {
+      return DatedDraughtsGameRules.getValue(level, DatedDraughtsGameRules.OLD_COMBAT);
+    } else {
+      return SyncedRules.getValue(DatedDraughtsGameRules.OLD_COMBAT);
+    }
+  }
 }

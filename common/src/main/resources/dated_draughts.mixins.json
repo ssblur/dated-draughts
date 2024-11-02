@@ -4,15 +4,21 @@
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
+    "BetaArmoPostMixin",
     "BetaGuiMixin",
+    "BetaHumanoidModelMixin",
+    "BetaItemInHandRendererMixin",
     "BetaItemRendererMixin",
-    "BetaLocalPlayerMixin"
+    "BetaLocalPlayerMixin",
+    "BetaPlayerRendererMixin"
   ],
   "mixins": [
     "BetaFoodDataMixin",
     "BetaFoodMixin",
     "BetaLivingEntityMixin",
-    "BetaPlayerMixin"
+    "BetaPlayerMixin",
+    "BetaSwordMixin",
+    "BetaUseAnimMixin"
   ],
   "injectors": {
     "defaultRequire": 1

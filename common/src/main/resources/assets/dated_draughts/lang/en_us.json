@@ -1,5 +1,8 @@
 {
   "item.dated_draughts.milk": "Beta Porkchop",
   "effect.dated_draughts.beta_food": "Uncraving",
-  "effect.dated_draughts.old_water": "Nonaquatic"
+  "effect.dated_draughts.old_water": "Nonaquatic",
+  "effect.dated_draughts.old_combat": "Dextrous",
+
+  "subtitles.entity.player.hurt_classic": "Player hurts (classic)"
 }

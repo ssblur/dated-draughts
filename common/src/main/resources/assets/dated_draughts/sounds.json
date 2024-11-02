@@ -1,0 +1,8 @@
+{
+  "ough": {
+    "subtitle": "subtitles.entity.player.hurt_classic",
+    "sounds": [
+      "dated_draughts:ough"
+    ]
+  }
+}
