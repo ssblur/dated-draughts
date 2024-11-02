@@ -6,11 +6,13 @@
   "client": [
     "BetaGuiMixin",
     "BetaItemRendererMixin",
-    "BetaPlayerMixin"
+    "BetaLocalPlayerMixin"
   ],
   "mixins": [
     "BetaFoodDataMixin",
-    "BetaFoodMixin"
+    "BetaFoodMixin",
+    "BetaLivingEntityMixin",
+    "BetaPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

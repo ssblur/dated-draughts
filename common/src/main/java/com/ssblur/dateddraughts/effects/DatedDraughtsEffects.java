@@ -13,6 +13,8 @@ public class DatedDraughtsEffects {
   public static final DeferredRegister<MobEffect> EFFECTS = DeferredRegister.create(DatedDraughts.MOD_ID, Registries.MOB_EFFECT);
   public static final RegistrySupplier<MobEffect> BETA_FOOD = EFFECTS.register("beta_food",
     () -> new DatedDraughtEffect(MobEffectCategory.NEUTRAL, 0xff44cc00));
+  public static final RegistrySupplier<MobEffect> OLD_WATER = EFFECTS.register("old_water",
+    () -> new DatedDraughtEffect(MobEffectCategory.NEUTRAL, 0xff4444cc));
 
 
   public static void init() {

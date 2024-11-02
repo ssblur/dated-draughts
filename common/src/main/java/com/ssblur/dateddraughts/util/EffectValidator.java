@@ -1,12 +1,9 @@
 package com.ssblur.dateddraughts.util;
 
-import com.ssblur.dateddraughts.DatedDraughts;
 import com.ssblur.dateddraughts.DatedDraughtsGameRules;
-import com.ssblur.dateddraughts.effects.DatedDraughtEffect;
 import com.ssblur.dateddraughts.effects.DatedDraughtsEffects;
 import com.ssblur.dateddraughts.events.network.SyncedRules;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 
 public class EffectValidator {
@@ -17,6 +14,16 @@ public class EffectValidator {
       return DatedDraughtsGameRules.getValue(level, DatedDraughtsGameRules.BETA_FOOD);
     } else {
       return SyncedRules.getValue(DatedDraughtsGameRules.BETA_FOOD);
+    }
+  }
+
+  public static boolean applyOldSwimmingMechanics(Player player) {
+    if(player.hasEffect(DatedDraughtsEffects.get(DatedDraughtsEffects.OLD_WATER)))
+      return true;
+    if(player.level() instanceof ServerLevel level) {
+      return DatedDraughtsGameRules.getValue(level, DatedDraughtsGameRules.OLD_WATER);
+    } else {
+      return SyncedRules.getValue(DatedDraughtsGameRules.OLD_WATER);
     }
   }
 }

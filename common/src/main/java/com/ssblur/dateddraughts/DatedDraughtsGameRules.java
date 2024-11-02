@@ -12,14 +12,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
+@SuppressWarnings("unused")
 public class DatedDraughtsGameRules {
   public static List<GameRules.Key<GameRules.BooleanValue>> syncedRules = new ArrayList<>();
 
   public static GameRules.Key<GameRules.BooleanValue> BETA_FOOD;
+  public static GameRules.Key<GameRules.BooleanValue> OLD_WATER;
   public static GameRules.Key<GameRules.BooleanValue> ENABLE_ALL;
 
   public static void init() {
     BETA_FOOD = register("dated_draughts:beta_food", true);
+    OLD_WATER = register("dated_draughts:old_water", true);
     ENABLE_ALL = register("dated_draughts:enable_all", true);
   }
 
