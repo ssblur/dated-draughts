@@ -12,7 +12,7 @@ import java.util.Arrays;
 @Environment(EnvType.CLIENT)
 @Mixin(HumanoidModel.ArmPose.class)
 @Unique
-public class BetaArmoPostMixin {
+public class BetaArmPoseMixin {
   @Shadow
   @Final
   @Mutable
@@ -28,11 +28,11 @@ public class BetaArmoPostMixin {
 
   @Unique
   private static HumanoidModel.ArmPose dd$addArmPose(String poseName, boolean twoHanded) {
-    assert BetaArmoPostMixin.$VALUES != null;
-    ArrayList<HumanoidModel.ArmPose> poses = new ArrayList<>(Arrays.asList(BetaArmoPostMixin.$VALUES));
+    assert BetaArmPoseMixin.$VALUES != null;
+    ArrayList<HumanoidModel.ArmPose> poses = new ArrayList<>(Arrays.asList(BetaArmPoseMixin.$VALUES));
     HumanoidModel.ArmPose pose = dd$invokeInit(poseName, poses.getLast().ordinal() + 1, twoHanded);
     poses.add(pose);
-    BetaArmoPostMixin.$VALUES = poses.toArray(new HumanoidModel.ArmPose[0]);
+    BetaArmPoseMixin.$VALUES = poses.toArray(new HumanoidModel.ArmPose[0]);
     return pose;
   }
 }

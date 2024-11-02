@@ -11,12 +11,15 @@ import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PlayerRenderer.class)
 public abstract class BetaPlayerRendererMixin extends LivingEntityRenderer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> {
+  @Unique
+  private static final HumanoidModel.ArmPose dd$BLOCK_POSE = HumanoidModel.ArmPose.valueOf("dated_draughts:block");
   public BetaPlayerRendererMixin(EntityRendererProvider.Context context, PlayerModel<AbstractClientPlayer> entityModel, float f) {
     super(context, entityModel, f);
   }
@@ -30,7 +33,7 @@ public abstract class BetaPlayerRendererMixin extends LivingEntityRenderer<Abstr
   ) {
     var anim = itemStack.getUseAnimation();
     if (anim == DatedDraughts.BLOCK && anim == itemStack.getUseAnimation()) {
-      cir.setReturnValue(DatedDraughts.BLOCK_POSE);
+      cir.setReturnValue(dd$BLOCK_POSE);
     }
   }
 }
