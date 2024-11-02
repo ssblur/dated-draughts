@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "com.ssblur.dateddraughts.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+    "BetaGuiMixin",
+    "BetaItemRendererMixin",
+    "BetaPlayerMixin"
+  ],
+  "mixins": [
+    "BetaFoodDataMixin",
+    "BetaFoodMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
