@@ -13,5 +13,7 @@
   "effect.dated_draughts.old_water": "Nonaquatic",
   "effect.dated_draughts.old_combat": "Dextrous",
 
+  "itemGroup.dated_draughts.tab": "Dated Draughts",
+
   "subtitles.entity.player.hurt_classic": "Player hurts (classic)"
 }

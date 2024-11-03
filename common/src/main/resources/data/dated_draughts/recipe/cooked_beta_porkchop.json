@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "dated_draughts:porkchop"
+  },
+  "result": {
+    "id": "dated_draughts:cooked_porkchop",
+    "count": 1
+  },
+  "experience": 2
+}
