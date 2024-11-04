@@ -1,16 +1,22 @@
 plugins {
-    id 'dev.architectury.loom' version '1.6-SNAPSHOT' apply false
-    id 'architectury-plugin' version '3.4-SNAPSHOT'
-    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+  id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
+  id 'architectury-plugin' version '3.4-SNAPSHOT'
+  id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+  id "com.palantir.git-version" version "0.15.0"
 }
 
 architectury {
-    minecraft = project.minecraft_version
+  minecraft = project.minecraft_version
 }
 
 allprojects {
-    group = rootProject.maven_group
-    version = rootProject.mod_version
+  group = rootProject.maven_group
+  def matcher = gitVersion() =~ /^v(\d+\.\d+\.\d+.*)/
+  matcher.find()
+  if(matcher.groupCount() >= 1)
+    version = matcher.group(1)
+  else
+    version = "dev"
 }
 
 subprojects {
@@ -36,8 +42,9 @@ subprojects {
     }
 
     dependencies {
-        minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
-        mappings loom.officialMojangMappings()
+      minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
+      mappings loom.officialMojangMappings()
+      compileOnly 'com.google.code.findbugs:jsr305:3.0.1'
     }
 
     java {
