@@ -23,17 +23,17 @@ public class DatedDraughtsEffects {
 
   public static final DeferredRegister<Potion> POTIONS = DeferredRegister.create(DatedDraughts.MOD_ID, Registries.POTION);
   public static final RegistrySupplier<Potion> BETA_FOOD_POTION = POTIONS.register("beta_food",
-    () -> new Potion("beta_food", new MobEffectInstance(BETA_FOOD, 6000)));
+    () -> new Potion("beta_food", new MobEffectInstance(get(BETA_FOOD), 6000)));
   public static final RegistrySupplier<Potion> OLD_WATER_POTION = POTIONS.register("old_water",
-    () -> new Potion("old_water", new MobEffectInstance(OLD_WATER, 6000)));
+    () -> new Potion("old_water", new MobEffectInstance(get(OLD_WATER), 6000)));
   public static final RegistrySupplier<Potion> OLD_COMBAT_POTION = POTIONS.register("old_combat",
-    () -> new Potion("old_combat", new MobEffectInstance(OLD_COMBAT, 6000)));
+    () -> new Potion("old_combat", new MobEffectInstance(get(OLD_COMBAT), 6000)));
   public static final RegistrySupplier<Potion> DATED_DRAUGHT_POTION = POTIONS.register("dated_draught",
     () -> new Potion(
       "dated_draught",
-      new MobEffectInstance(OLD_COMBAT, 12000),
-      new MobEffectInstance(OLD_WATER, 12000),
-      new MobEffectInstance(BETA_FOOD, 12000)
+      new MobEffectInstance(get(OLD_COMBAT), 12000),
+      new MobEffectInstance(get(OLD_WATER), 12000),
+      new MobEffectInstance(get(BETA_FOOD), 12000)
     )
   );
 
