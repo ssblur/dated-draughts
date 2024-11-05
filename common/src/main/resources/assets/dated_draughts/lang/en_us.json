@@ -19,6 +19,11 @@
   "item.minecraft.lingering_potion.effect.old_combat": "Lingering Draught of the Dextrous",
   "item.minecraft.lingering_potion.effect.dated_draught": "Lingering Dated Draught",
 
+  "item.minecraft.tipped_arrow.effect.beta_food": "Arrow of the Uncraving",
+  "item.minecraft.tipped_arrow.effect.old_water": "Arrow of the Nonaquatic",
+  "item.minecraft.tipped_arrow.effect.old_combat": "Arrow of the Dextrous",
+  "item.minecraft.tipped_arrow.effect.dated_draught": "Dated Arrow",
+
   "effect.dated_draughts.beta_food": "Uncraving",
   "effect.dated_draughts.old_water": "Nonaquatic",
   "effect.dated_draughts.old_combat": "Dextrous",
