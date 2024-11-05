@@ -1,6 +1,7 @@
 package com.ssblur.dateddraughts.mixin;
 
 import com.ssblur.dateddraughts.DatedDraughts;
+import com.ssblur.dateddraughts.item.DatedDraughtsItems;
 import com.ssblur.dateddraughts.sounds.DatedDraughtsSounds;
 import com.ssblur.dateddraughts.util.EffectValidator;
 import net.minecraft.sounds.SoundEvent;
@@ -52,6 +53,8 @@ public abstract class BetaPlayerMixin extends LivingEntity {
     Player self = (Player) (Object) this;
     if(EffectValidator.applyOldCombatMechanics(self))
       if(self.level().isClientSide && equipmentSlot == EquipmentSlot.OFFHAND) {
+        if (!cir.getReturnValue().is(DatedDraughtsItems.ALWAYS_OFFHAND) &&
+          !self.getItemBySlot(EquipmentSlot.MAINHAND).is(DatedDraughtsItems.ALWAYS_OFFHAND))
           cir.setReturnValue(ItemStack.EMPTY);
       }
   }

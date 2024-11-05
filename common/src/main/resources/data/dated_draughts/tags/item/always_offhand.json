@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:glass_bottle",
+    {
+      "id": "witchery:bone_needle",
+      "required": false
+    },
+    {
+      "id": "witchery:taglock",
+      "required": false
+    }
+  ]
+}

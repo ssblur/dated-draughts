@@ -9,7 +9,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.Potion;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 @SuppressWarnings("unused")
 public class DatedDraughtsEffects {
@@ -42,8 +42,7 @@ public class DatedDraughtsEffects {
     POTIONS.register();
   }
 
-  @Nullable
-  public static Holder<MobEffect> get(RegistrySupplier<MobEffect> effect) {
+  public static Holder<MobEffect> get(@NotNull RegistrySupplier<MobEffect> effect) {
     return EFFECTS.getRegistrar().getHolder(effect.getId());
   }
 }

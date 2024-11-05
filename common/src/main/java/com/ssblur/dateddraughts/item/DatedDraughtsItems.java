@@ -7,6 +7,7 @@ import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -54,6 +55,9 @@ public class DatedDraughtsItems {
     new Item(new Item.Properties().food(Foods.COD).arch$tab(TAB)));
   public static final RegistrySupplier<Item> COOKED_FISH = ITEMS.register("cooked_fish", () ->
     new Item(new Item.Properties().food(Foods.COOKED_COD).arch$tab(TAB)));
+
+  public static final TagKey<Item> ALWAYS_OFFHAND = TagKey.create(Registries.ITEM, DatedDraughts.location("always_offhand"));
+  public static final TagKey<Item> BETA_FOOD = TagKey.create(Registries.ITEM, DatedDraughts.location("beta_food"));
 
   public static void init() {
     ITEMS.register();
