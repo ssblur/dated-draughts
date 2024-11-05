@@ -9,6 +9,16 @@
   "item.minecraft.potion.effect.old_combat": "Draught of the Dextrous",
   "item.minecraft.potion.effect.dated_draught": "Dated Draught",
 
+  "item.minecraft.splash_potion.effect.beta_food": "Splash Draught of the Uncraving",
+  "item.minecraft.splash_potion.effect.old_water": "Splash Draught of the Nonaquatic",
+  "item.minecraft.splash_potion.effect.old_combat": "Splash Draught of the Dextrous",
+  "item.minecraft.splash_potion.effect.dated_draught": "Splash Dated Draught",
+
+  "item.minecraft.lingering_potion.effect.beta_food": "Lingering Draught of the Uncraving",
+  "item.minecraft.lingering_potion.effect.old_water": "Lingering Draught of the Nonaquatic",
+  "item.minecraft.lingering_potion.effect.old_combat": "Lingering Draught of the Dextrous",
+  "item.minecraft.lingering_potion.effect.dated_draught": "Lingering Dated Draught",
+
   "effect.dated_draughts.beta_food": "Uncraving",
   "effect.dated_draughts.old_water": "Nonaquatic",
   "effect.dated_draughts.old_combat": "Dextrous",

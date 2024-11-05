@@ -31,6 +31,16 @@ public class DatedDraughtsItems {
             output.accept(PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.OLD_WATER_POTION));
             output.accept(PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.BETA_FOOD_POTION));
             output.accept(PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.DATED_DRAUGHT_POTION));
+
+            output.accept(PotionContents.createItemStack(Items.SPLASH_POTION, DatedDraughtsEffects.OLD_COMBAT_POTION));
+            output.accept(PotionContents.createItemStack(Items.SPLASH_POTION, DatedDraughtsEffects.OLD_WATER_POTION));
+            output.accept(PotionContents.createItemStack(Items.SPLASH_POTION, DatedDraughtsEffects.BETA_FOOD_POTION));
+            output.accept(PotionContents.createItemStack(Items.SPLASH_POTION, DatedDraughtsEffects.DATED_DRAUGHT_POTION));
+
+            output.accept(PotionContents.createItemStack(Items.LINGERING_POTION, DatedDraughtsEffects.OLD_COMBAT_POTION));
+            output.accept(PotionContents.createItemStack(Items.LINGERING_POTION, DatedDraughtsEffects.OLD_WATER_POTION));
+            output.accept(PotionContents.createItemStack(Items.LINGERING_POTION, DatedDraughtsEffects.BETA_FOOD_POTION));
+            output.accept(PotionContents.createItemStack(Items.LINGERING_POTION, DatedDraughtsEffects.DATED_DRAUGHT_POTION));
           });
         }
       )
