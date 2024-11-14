@@ -45,4 +45,8 @@ public class DatedDraughtsEffects {
   public static Holder<MobEffect> get(@NotNull RegistrySupplier<MobEffect> effect) {
     return EFFECTS.getRegistrar().getHolder(effect.getId());
   }
+
+  public static Holder<Potion> getPotion(@NotNull RegistrySupplier<Potion> effect) {
+    return POTIONS.getRegistrar().getHolder(effect.getId());
+  }
 }

@@ -28,13 +28,13 @@ public class BetaBrewingMixin {
   private void dd$mix(ItemStack ingredient, ItemStack potion, CallbackInfoReturnable<ItemStack> info) {
     var potionContents = potion.get(DataComponents.POTION_CONTENTS);
     if(ingredient.getItem() == DatedDraughtsItems.COOKED_PORKCHOP.get() && potionContents != null && potionContents.is(Potions.THICK)) {
-      var out = PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.BETA_FOOD_POTION);
+      var out = PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.getPotion(DatedDraughtsEffects.BETA_FOOD_POTION));
       info.setReturnValue(out);
     } else if(ingredient.getItem() == DatedDraughtsItems.COOKED_FISH.get() && potionContents != null && potionContents.is(Potions.THICK)) {
-      var out = PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.OLD_WATER_POTION);
+      var out = PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.getPotion(DatedDraughtsEffects.OLD_WATER_POTION));
       info.setReturnValue(out);
     } else if(ingredient.getItem() == Items.STONE_SWORD && potionContents != null && potionContents.is(Potions.THICK)) {
-      var out = PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.OLD_COMBAT_POTION);
+      var out = PotionContents.createItemStack(Items.POTION, DatedDraughtsEffects.getPotion(DatedDraughtsEffects.OLD_COMBAT_POTION));
       info.setReturnValue(out);
     }  else if(ingredient.is(Items.GUNPOWDER) && potion.is(Items.POTION) && ItemStack.isSameItemSameComponents(info.getReturnValue(), potion)) {
       var out = potion.transmuteCopy(Items.SPLASH_POTION);
